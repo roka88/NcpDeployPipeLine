@@ -14,11 +14,18 @@ public class OperationPipeLine {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private Queue<JobPipe> jobList = new LinkedList<>();
+    private JobPipe priorityJob;
+
     private Subscriber subscriber;
     private ExecutorService executor;
 
     public OperationPipeLine job(JobPipe action) {
         jobList.add(action);
+        return this;
+    }
+
+    public OperationPipeLine setPriorityJob(JobPipe jobPipe) {
+        this.priorityJob = jobPipe;
         return this;
     }
 
@@ -45,6 +52,7 @@ public class OperationPipeLine {
         }
     }
 
+
     public JobPipe getJobPipe() {
         return this.jobList.peek();
     }
@@ -60,36 +68,37 @@ public class OperationPipeLine {
 
 
     public void operation() {
-        new Thread(()->{
-            Object result = null;
+        Object result = null;
+        while (!jobList.isEmpty()) {
+            try {
+                JobPipe action;
 
-            while (!jobList.isEmpty()) {
-                try {
-                    JobPipe action = jobList.peek();
-
-                    result = action.call(result);
-                    notifyAllObserver(result);
-
-                    jobList.remove();
-
-                } catch (Exception e) {
-                    logger.error(e.toString());
-                    notifyAllObserverOfException(e);
-                    jobList.clear();
-
-                    notifyWorkerShutdown();
-                    return;
+                if (null != priorityJob) {
+                    action = priorityJob;
+                } else {
+                    action = jobList.peek();
                 }
+
+                result = action.call(result);
+                notifyAllObserver(result);
+
+                if (null != priorityJob) {
+                    priorityJob = null;
+                } else {
+                    jobList.remove();
+                }
+            } catch (Exception e) {
+                logger.error(e.toString());
+                notifyAllObserverOfException(e);
+                jobList.clear();
+                priorityJob = null;
+
+                notifyWorkerShutdown();
+                return;
             }
-
-            notifyWorkerShutdown();
-
-        }).start();
+        }
+        notifyWorkerShutdown();
     }
-
-
-
-
 
 
 }

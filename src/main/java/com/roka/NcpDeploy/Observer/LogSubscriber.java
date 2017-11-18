@@ -28,7 +28,7 @@ public class LogSubscriber implements Subscriber {
     @Override
     public void notifyAllObserverOfException(Exception e) {
         for (JobObserver observer : subscribes) {
-            observer.notifyStatus(e.toString());
+            observer.notifyStatus(e);
         }
     }
 }
