@@ -116,7 +116,8 @@ NcloudApiRequest ncloudApiRequest = new NcloudApiRequest();
 .....
 .....
 
-AutoScalingGroupManager autoScalingGroupManager = new AutoScalingGroupManager(ncloudApiRequest);        AutoScalingLogManager autoScalingLogManager = new AutoScalingLogManager(ncloudApiRequest);
+AutoScalingGroupManager autoScalingGroupManager = new AutoScalingGroupManager(ncloudApiRequest);        
+AutoScalingLogManager autoScalingLogManager = new AutoScalingLogManager(ncloudApiRequest);
 AutoScalingPolicyManager autoScalingPolicyManager = new AutoScalingPolicyManager(ncloudApiRequest);
 LaunchConfigurationManager launchConfigurationManager = new LaunchConfigurationManager(ncloudApiRequest);
 ProductManager productManager = new ProductManager(ncloudApiRequest);
