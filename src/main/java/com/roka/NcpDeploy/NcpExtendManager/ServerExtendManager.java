@@ -9,7 +9,7 @@ import com.roka.NcpDeploy.PipeLine.JobPipe;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
-
+@Deprecated
 public class ServerExtendManager extends ServerManager {
 
     public ServerExtendManager(NcloudApiRequest ncloudApiRequest) {

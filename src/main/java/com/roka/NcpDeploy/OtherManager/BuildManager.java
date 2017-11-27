@@ -4,7 +4,7 @@ package com.roka.NcpDeploy.OtherManager;
 import com.roka.NcpDeploy.PipeLine.JobPipe;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
-
+@Deprecated
 public class BuildManager {
 
     public JobPipe gradleBuild(String buildPath) {

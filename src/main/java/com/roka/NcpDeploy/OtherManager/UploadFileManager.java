@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
-
+@Deprecated
 public class UploadFileManager {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());

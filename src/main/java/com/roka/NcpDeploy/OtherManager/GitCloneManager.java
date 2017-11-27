@@ -10,7 +10,7 @@ import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-
+@Deprecated
 public class GitCloneManager {
 
     public JobPipe clone(String repositoryPath, String downloadDirPath, String userName, String password) {

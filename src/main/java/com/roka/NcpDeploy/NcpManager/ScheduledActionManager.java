@@ -5,7 +5,7 @@ import com.ncloud.api.connection.NcloudApiRequest;
 import com.roka.NcpDeploy.PipeLine.JobPipe;
 
 import java.util.List;
-
+@Deprecated
 public class ScheduledActionManager extends ScheduledActionConnection {
 
     public ScheduledActionManager(NcloudApiRequest ncloudApiRequest) {

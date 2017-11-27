@@ -9,7 +9,7 @@ import com.roka.NcpDeploy.PipeLine.JobPipe;
 
 
 import java.util.List;
-
+@Deprecated
 public class LaunchConfigurationExtendManager extends LaunchConfigurationManager {
 
     public LaunchConfigurationExtendManager(NcloudApiRequest ncloudApiRequest) {

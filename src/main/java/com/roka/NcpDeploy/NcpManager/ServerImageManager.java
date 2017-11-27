@@ -5,7 +5,7 @@ import com.ncloud.api.image.connection.MemberServerImageConnection;
 import com.roka.NcpDeploy.PipeLine.JobPipe;
 
 import java.util.List;
-
+@Deprecated
 public class ServerImageManager extends MemberServerImageConnection {
 
     public enum HealthCheckType {

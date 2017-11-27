@@ -7,7 +7,7 @@ import com.roka.NcpDeploy.PipeLine.JobPipe;
 
 
 import java.util.List;
-
+@Deprecated
 public class SuspendProcessManager extends SuspendProcessConnection {
 
     public SuspendProcessManager(NcloudApiRequest ncloudApiRequest) {

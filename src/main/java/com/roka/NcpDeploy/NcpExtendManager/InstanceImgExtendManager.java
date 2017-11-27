@@ -9,7 +9,7 @@ import com.roka.NcpDeploy.PipeLine.JobPipe;
 
 import java.util.Collections;
 import java.util.List;
-
+@Deprecated
 public class InstanceImgExtendManager extends ServerImageManager {
 
     public InstanceImgExtendManager(NcloudApiRequest ncloudApiRequest) {

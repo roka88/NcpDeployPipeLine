@@ -4,7 +4,7 @@ package com.roka.NcpDeploy.OtherManager;
 
 import com.roka.NcpDeploy.PipeLine.JobPipe;
 import org.slf4j.LoggerFactory;
-
+@Deprecated
 public class LogManager {
 
     public JobPipe resultLog() {

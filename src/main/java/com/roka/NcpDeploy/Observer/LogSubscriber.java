@@ -3,7 +3,7 @@ package com.roka.NcpDeploy.Observer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+@Deprecated
 public class LogSubscriber implements Subscriber {
 
     List<JobObserver> subscribes = Collections.synchronizedList(new ArrayList<>());

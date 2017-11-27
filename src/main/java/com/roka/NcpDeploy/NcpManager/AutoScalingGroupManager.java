@@ -5,7 +5,7 @@ import com.ncloud.api.connection.NcloudApiRequest;
 import com.roka.NcpDeploy.PipeLine.JobPipe;
 
 import java.util.List;
-
+@Deprecated
 public class AutoScalingGroupManager extends AutoScalingGroupConnection {
 
     // HLTHY (healthy): INSVC (in service), PNDNG (Pending status), TMNNG(Terminating)

@@ -6,7 +6,7 @@ import com.roka.NcpDeploy.PipeLine.JobPipe;
 
 
 import java.util.List;
-
+@Deprecated
 public class AutoScalingPolicyManager extends AutoScalingPolicyConnection {
 
     public AutoScalingPolicyManager(NcloudApiRequest ncloudApiRequest) {

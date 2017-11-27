@@ -9,6 +9,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.ExecutorService;
 
+@Deprecated
 public class OperationPipeLine {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -18,6 +19,7 @@ public class OperationPipeLine {
 
     private Subscriber subscriber;
     private ExecutorService executor;
+
 
     public OperationPipeLine job(JobPipe action) {
         jobList.add(action);
